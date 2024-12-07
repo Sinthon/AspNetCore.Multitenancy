@@ -87,7 +87,7 @@ public static class InitContextExntensions
 
 
     public static EntityTypeBuilder<T> ConfigureTanantEntity<T>(this EntityTypeBuilder<T> builder, Expression<Func<T, bool>> hasQueryFilter)
-        where T : class, IHasTenant
+        where T : class, ITenantEntity
     {
         builder.HasIndex(x => x.TenantId);
         builder.HasQueryFilter(hasQueryFilter);
@@ -95,7 +95,7 @@ public static class InitContextExntensions
     }
 
     public static EntityTypeBuilder<T> ConfigureTanantEntity<T>(this EntityTypeBuilder<T> builder)
-        where T : class, IHasTenant
+        where T : class, ITenantEntity
     {
         builder.HasIndex(x => x.TenantId);
         return builder;

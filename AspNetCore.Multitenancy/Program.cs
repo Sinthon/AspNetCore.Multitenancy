@@ -32,17 +32,17 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
-//try
-//{
-//    using var scope = app.Services.CreateScope();
-//    var dbContext = scope.ServiceProvider
-//        .GetRequiredService<InitContext>();
-//    dbContext.Init();
-//}
-//catch(Exception ex)
-//{
-//    Console.WriteLine(ex.Message);
-//}
+try
+{
+    using var scope = app.Services.CreateScope();
+    var dbContext = scope.ServiceProvider
+        .GetRequiredService<InitContext>();
+    dbContext.Init();
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
 
 
 app.UseHttpsRedirection();

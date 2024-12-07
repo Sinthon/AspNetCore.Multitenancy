@@ -1,6 +1,6 @@
 ﻿namespace AspNetCore.Multitenancy;
 
-public interface IHasTenant
+public interface ITenantEntity
 {
     public Guid TenantId { get; set; }
     public Tenant Tenant { get; set; }

@@ -1,6 +1,6 @@
 namespace AspNetCore.Multitenancy
 {
-    public class WeatherForecast : AggregateRoot, IHasTenant
+    public class WeatherForecast : AggregateRoot, ITenantEntity
     {
         public DateOnly Date { get; set; }
 
