@@ -1,0 +1,8 @@
+@AspNetCore.Multitenancy_HostAddress = http://localhost:5254
+@AspNetCore.Multitenancy_TenantId = FDD95553-BFE2-498B-C8B2-08DD166B1F14
+
+GET {{AspNetCore.Multitenancy_HostAddress}}/weatherforecast/
+Accept: application/json
+X-TenantId: {{AspNetCore.Multitenancy_TenantId}}
+
+###
